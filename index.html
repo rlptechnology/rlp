@@ -1,122 +1,170 @@
+<!DOCTYPE html>
 <html>
-<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dr.Atul Raine</title>
+  <title> Astrology | Achariya Atul Raine</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f4f4f4;
-}
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 
-header {
-  background: #2c7a7b;
-  color: white;
-  text-align: center;
-  padding: 40px;
-}
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #0b132b;
+      color: white;
+    }
 
-header h1 {
-  margin: 0;
-  font-size: 36px;
-}
+    header {
+      text-align: center;
+      padding: 80px 20px;
+      background: linear-gradient(90deg, #1c2541, #3a506b);
+    }
 
-.hero {
-  text-align: center;
-  padding: 30px;
-}
+    h1 {
+      margin: 0;
+      font-size: 42px;
+      color: #FFD700;
+    }
 
-.hero img {
-  width: 200px;
-  border-radius: 50%;
-}
+    nav {
+      background: #1c2541;
+      text-align: center;
+      padding: 12px;
+    }
 
-section {
-  padding: 30px;
-  max-width: 900px;
-  margin: auto;
-}
+    nav a {
+      color: white;
+      margin: 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
 
-.card {
-  background: white;
-  padding: 20px;
-  margin: 20px 0;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
 
-button {
-  background: #2c7a7b;
-  color: white;
-  padding: 12px 25px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
+    .profile img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      margin-top: 20px;
+    }
 
-.ad {
-  background: #ffe4b5;
-  text-align: center;
-  padding: 20px;
-  margin-top: 20px;
-  border-radius: 10px;
-}
+    .services {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
 
-footer {
-  background: #333;
-  color: white;
-  text-align: center;
-  padding: 15px;
-}
-</style>
+    .card {
+      background: #1c2541;
+      padding: 20px;
+      width: 280px;
+      border-radius: 10px;
+    }
+
+    .card h3 {
+      color: #FFD700;
+    }
+
+    .btn {
+      background: #FFD700;
+      color: black;
+      padding: 12px 25px;
+      border: none;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+
+    footer {
+      background: #1c2541;
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* WhatsApp Button */
+    .whatsapp {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: green;
+      color: white;
+      padding: 15px;
+      border-radius: 50%;
+      text-decoration: none;
+      font-size: 20px;
+    }
+  </style>
 </head>
 
 <body>
 
 <header>
-  <h1>Acharya Atul Raine</h1>
-  <p>Helping People. Changing Lives.</p>
+  <h1>Astrology</h1>
+  <p>Guiding Your Future with Vedic Wisdom</p>
 </header>
 
-<div class="hero">
-  <!-- Replace this image URL with your own -->
-  <img src="https://via.placeholder.com/200" alt="Atul Raine">
+<nav>
+  <a href="#">Home</a>
+  <a href="#">Services</a>
+  <a href="#">About</a>
+  <a href="#">Contact</a>
+</nav>
 
-  <img src="photo.jpg" style="width:200px; border-radius:50%;">
-</div>
+<!-- PROFILE -->
+<section class="profile">
+  <h2 style="color:#FFD700;">Acharya Atul Raine</h2>
+  <img src="atul.jpg" alt="Acharya Atul Raine">
 
+  <p style="max-width:700px; margin:auto;">
+    Expert Vedic astrologer with years of experience in horoscope reading,
+    kundali matching, and life guidance.
+  </p>
+</section>
+
+<!-- SERVICES -->
 <section>
-  <div class="card">
-    <h2>About Us</h2>
-    <p>We are a non-profit organization dedicated to helping underprivileged communities through education, food support, and healthcare initiatives.</p>
-  </div>
+  <h2>Our Services</h2>
+  <div class="services">
+    <div class="card">
+      <h3>Horoscope Reading</h3>
+      <p>Accurate life predictions based on your birth chart.</p>
+    </div>
 
-  <div class="card">
-    <h2>Our Mission</h2>
-    <p>Our mission is to bring positive change by supporting those in need and creating opportunities for a better future.</p>
-  </div>
+    <div class="card">
+      <h3>Kundali Matching</h3>
+      <p>Marriage compatibility and relationship analysis.</p>
+    </div>
 
-  <div class="card">
-    <h2>Donate Now</h2>
-    <p>Your contribution can make a difference.</p>
-    <button onclick="alert('Thank you for your support!')">Donate</button>
+    <div class="card">
+      <h3>Career Guidance</h3>
+      <p>Find the right career path with astrology insights.</p>
+    </div>
   </div>
+</section>
 
-  <!-- Advertisement Section -->
-  <div class="ad">
-    <h3>Advertisement</h3>
-    <p>Promote your business here</p>
-    <img src="https://via.placeholder.com/300x100" alt="Ad Banner">
-  </div>
+<!-- CTA -->
+<section>
+  <h2>Book Consultation</h2>
+  <p>Talk directly with Acharya Atul Raine</p>
+  <button class="btn">Book Now</button>
+</section>
 
+<!-- CONTACT -->
+<section>
+  <h2>Contact</h2>
+  <p>Email: panditatulraina@gmail.com</p>
+  <p>Phone: +91-9797335095</p>
 </section>
 
 <footer>
-  <p>© 2026 Atul Rane Charity | All Rights Reserved</p>
+  <p>© 2026 RLP Astrology</p>
 </footer>
+
+<!-- WhatsApp -->
+<a href="https://wa.me/91XXXXXXXXXX" class="whatsapp">💬</a>
 
 </body>
 </html>
