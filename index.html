@@ -1,97 +1,1811 @@
+
 <!DOCTYPE html>
-<html>
+
+<html class="no-js">
+
 <head>
-  <title>RLP Technology</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      background: #F5F7FA;
-    }
+	<title>Acharya Ashwinie</title>
+	<meta charset="utf-8">
+	<!--[if IE]>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<![endif]-->
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    header {
-      background: linear-gradient(90deg, #0A2540, #2E6BFF);
-      color: white;
-      padding: 60px 20px;
-      text-align: center;
-    }
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-    h1 { margin: 0; font-size: 40px; }
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/animations.css">
+	<link rel="stylesheet" href="css/font-awesome.css">
+	<link rel="stylesheet" href="css/icomoon.css">
+	<link rel="stylesheet" href="css/main.css" class="color-switcher-link">
+	<link rel="stylesheet" href="css/shop.css" class="color-switcher-link">
+	<script src="js/vendor/modernizr-2.6.2.min.js"></script>
 
-    .btn {
-      background: #00C2FF;
-      padding: 12px 25px;
-      color: white;
-      border: none;
-      cursor: pointer;
-      margin-top: 20px;
-    }
 
-    section {
-      padding: 50px;
-      text-align: center;
-    }
-
-    .services {
-      display: flex;
-      gap: 20px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    .card {
-      background: white;
-      padding: 20px;
-      width: 250px;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-
-    footer {
-      background: #0A2540;
-      color: white;
-      padding: 15px;
-      text-align: center;
-    }
-  </style>
 </head>
 
 <body>
 
-<header>
-  <h1>RLP Technology</h1>
-  <p>Innovate. Build. Grow.</p>
-  <button class="btn">Get Started</button>
-</header>
+<!--
+	<div class="preloader">
+		<div class="preloader_image pulse"></div>
+	</div> -->
 
-<section>
-  <h2>About Us</h2>
-  <p>We deliver modern IT solutions including web, mobile, and cloud services.</p>
+	<!-- search modal -->
+	<div class="modal" tabindex="-1" role="dialog" aria-labelledby="search_modal" id="search_modal">
+		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		</button>
+		<div class="widget widget_search">
+			<form method="get" class="searchform search-form" action="https://html.modernwebtemplates.com/">
+				<div class="form-group">
+					<input type="text" value="" name="search" class="form-control" placeholder="Search keyword" id="modal-search-input">
+				</div>
+				<button type="submit" class="btn">Search</button>
+			</form>
+		</div>
+	</div>
+
+	<!-- Unyson messages modal -->
+	<div class="modal fade" tabindex="-1" role="dialog" id="messages_modal">
+		<div class="fw-messages-wrap ls p-normal">
+			<!-- Uncomment this UL with LI to show messages in modal popup to your user: -->
+			<!--
+		<ul class="list-unstyled">
+			<li>Message To User</li>
+		</ul>
+		-->
+
+		</div>
+	</div><!-- eof .modal -->
+
+	<div class="modal fade popupLogin" id="popupLogin" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content ds bs box-shadow bordered overflow-visible s-overlay s-mobile-overlay">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<div class="modal-body">
+					<div class="container">
+						<div class="row">
+							<div class="col-12">
+								<h4 class="color-main2 mb-3">Log in</h4>
+								<form class="form-registration c-mb-20 c-gutter-20" action="https://html.modernwebtemplates.com/">
+									<div class="row mb-4">
+										<div class="col-sm-12">
+											<div class="form-group">
+												<input type="text" name="name" class="form-control" required placeholder="login" aria-required="true">
+											</div>
+										</div>
+										<div class="col-sm-12">
+											<div class="form-group">
+												<input type="password" name="password" class="form-control" placeholder="password" aria-required="true" required>
+											</div>
+										</div>
+									</div>
+									<a class="registerRedirect " data-dismiss="modal" data-target="#popupRegistr" data-toggle="modal" href="#">Not a member? Register!</a>
+									<button type="submit" class="btn btn-maincolor mt-30 d-block">Sign In</button>
+								</form>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade popupRegistr" id="popupRegistr" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content ds bs box-shadow bordered overflow-visible s-overlay s-mobile-overlay">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<div class="modal-body">
+					<div class="container">
+						<div class="row">
+							<div class="col-12">
+								<h4 class="color-main2 mb-4">Registration</h4>
+								<form class="form-registration c-mb-20 c-gutter-20" method="post" action="https://html.modernwebtemplates.com/">
+									<div class="row">
+										<div class="col-12">
+											<div class="form-group">
+												<input type="text" name="name" class="form-control" required placeholder="login" aria-required="true">
+											</div>
+										</div>
+										<div class="col-12">
+											<div class="form-group">
+												<input type="password" name="password" class="form-control" placeholder="password" aria-required="true" required>
+											</div>
+										</div>
+										<div class="col-12">
+											<div class="form-group">
+												<input type="email" name="email" class="form-control" placeholder="email" required aria-required="true">
+											</div>
+										</div>
+										<div class="col-12">
+											<div class="form-group">
+												<input type="password" name="confirmPassword" class="form-control" placeholder="password" required aria-required="true">
+											</div>
+										</div>
+										<div class="col-12">
+											<div class="form-group">
+												<input type="checkbox" id="agreed" name="agreed" value="agreed" required aria-required="true"><label for="agreed">I agree to the rules</label>
+											</div>
+										</div>
+									</div>
+									<button type="submit" class="btn btn-maincolor mt-30 d-block">Registration</button>
+								</form>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- wrappers for visual page editor and boxed version of template -->
+	<div id="canvas">
+		<div id="box_wrapper">
+
+			<!-- template sections -->
+
+			<div class="header_absolute ">
+
+				<!--topline section visible only on small screens|-->
+				<!-- <section class="page_topline ds s-py-30 " style="background:#fff;color:#000">
+					<div class="container">
+						<div class="row align-items-center justify-content-center">
+							<div class="col-xl-6 col-lg-4 col-md-4 text-lg-left text-center">
+								<a href="index.php" class="logo">
+
+									<strong class="logo-text" style="color:#ff7022">Acharya Ashwinie</strong>
+								</a>
+							</div>
+							<div class="col-xl-6 col-lg-8 col-md-8 some-links text-center text-lg-right d-flex justify-content-center justify-content-md-end align-items-center mt-2 mt-md-0">
+								<a class="fs-24 links-maincolor-hover font-2 d-none d-md-block" href="tel:8294631528" style="color:#000"><mark>+918294631528</mark></a>
+								<a href="#" class="btn btn-outline-maincolor btn-medium  d-none d-md-block" style="color:#000">
+									Book Consultation Now
+								</a>
+							</div>
+						</div>
+					</div>
+				</section> -->
+				<!--eof topline-->
+
+				<!-- header with two Bootstrap columns - left for logo and right for navigation and includes (search, social icons, additional links and buttons etc -->
+				<header class="page_header ds ms s-overlay justify-nav-start">
+					<div class="container">
+						<div class="row align-items-center">
+
+						<div class="col-xl-3 col-9  text-xl-right text-left">
+								<a href="index.php" class="logo">
+
+									<strong class="logo-text" style="color:#fff">Acharya Ashwinie</strong>
+								</a>
+							</div>
+							<div class="col-xl-9 col-1 order-2 order-xl-1">
+								<div class="nav-wrap">
+
+									<!-- main nav start -->
+									<nav class="top-nav">
+										<ul class="nav sf-menu">
+											<li >
+												<a href="index.php">Home</a>
+
+											</li>
+
+											<!-- blog -->
+											<li>
+												<a href="about.php">About</a>
+
+											</li>
+											<!-- eof blog -->
+											 			<li>
+												<a href="#">Services</a>
+												<div class="mega-menu">
+													<ul class="mega-menu-row">
+														<li class="mega-menu-col">
+																<ul>
+																	<li>
+																<a href="business-problem.php">Business Problem</a>
+															</li>
+															<li>
+																<a href="education-problem.php">Education Problem</a>
+															</li>
+															<li>
+																<a href="marriage-problem.php">Marriage Problem</a>
+															</li>
+															<li>
+																<a href="match-making.php">Match Making</a>
+															</li>
+                                                            	<li>
+																<a href="foreign-settlement.php">Foreign Settlement</a>
+															</li>
+															<li>
+																<a href="love-relationship.php">Love Relationship</a>
+															</li>
+															<li>
+																<a href="finance.php">Finance</a>
+															</li>
+															<li>
+																<a href="health-problem.php">Health Problem</a>
+															</li>
+															</ul>
+														</li>
+														<li class="mega-menu-col">
+
+															<ul>
+																	<li>
+																<a href="legal-issues.php">Legal Issues</a>
+															</li>
+                                                            	<li>
+																<a href="horoscope-analyse.php">Horoscope Analyses</a>
+															</li>
+
+															<li>
+																<a href="child-name.php">Child Name</a>
+															</li>
+                                                            	<li>
+																<a href="depression.php">Depression</a>
+															</li>
+                                                            	<li>
+																<a href="vastu.php">Vastu</a>
+															</li>
+																<li>
+																<a href="remedies.php">Remedies</a>
+															</li>
+                                                            	<li>
+																<a href="palmistry.php">Palmistry</a>
+															</li>
+															</ul>
+														</li>
+
+
+													</ul>
+												</div> <!-- eof mega menu -->
+											</li>
+
+											<!-- <li>
+												<a href="#">Services</a>
+											<ul>
+															<li>
+																<a href="business-problem.php">Business Problem</a>
+															</li>
+															<li>
+																<a href="education-problem.php">Education Problem</a>
+															</li>
+															<li>
+																<a href="marriage-problem.php">Marriage Problem</a>
+															</li>
+															<li>
+																<a href="match-making.php">Match Making</a>
+															</li>
+                                                            	<li>
+																<a href="foreign-settlement.php">Foreign Settlement</a>
+															</li>
+															<li>
+																<a href="love-relationship.php">Love Relationship</a>
+															</li>
+															<li>
+																<a href="wealthy-property.php">Finance</a>
+															</li>
+															<li>
+																<a href="health-fitness.php">Health Problem</a>
+															</li>
+                                                            	<li>
+																<a href="legal-issues.php">Legal Issues</a>
+															</li>
+                                                            	<li>
+																<a href="horoscope-analyse.php">Horoscope Analyses</a>
+															</li>
+
+															<li>
+																<a href="child-name.php">Child Name</a>
+															</li>
+                                                            	<li>
+																<a href="depression.php">Depression</a>
+															</li>
+                                                            	<li>
+																<a href="vastu.php">Vastu</a>
+															</li>
+																<li>
+																<a href="remedies.php">Remedies</a>
+															</li>
+                                                            	<li>
+																<a href="palmistry.php">Palmistry</a>
+															</li>
+														</ul>
+											</li> -->
+											<!-- eof features -->
+
+
+											<li>
+												<a href="consultation-charges.php">Consultation Charges</a>
+
+											</li>
+											<li>
+												<a href="https://blog.acharyaashwini.com/">Blog</a>
+
+											</li>
+											<!-- eof pages -->
+
+											<!-- gallery -->
+											<li>
+												<a href="faq.php">Faq</a>
+
+											</li>
+											<!-- eof Gallery -->
+
+											<!-- contacts -->
+											<li>
+												<a href="contact.php">Contact</a>
+
+											</li>
+											<!-- eof contacts -->
+										</ul>
+<a class="book-consultation" href="https://wa.me/918294631528?text=Hello%20I%20need%20astrology%20consultation">
+	Book Consultation
+</a>
+
+									</nav>
+									<!-- eof main nav -->
+
+								</div>
+							</div>
+
+						</div>
+					</div>
+					<!-- header toggler -->
+					<span class="toggle_menu"><span></span></span>
+				</header>
+
+			</div>
+
+
+<!-- home -->
+ <!--Section Top-->
+			<section class="s-py-90 s-pb-lg-80 s-pb-xl-140 slider_new_steel">
+				<div class="container">
+					<div class="divider-50 divider-xl-65"></div>
+					<div class="row align-center">
+						<div class="col-lg-6 col-xl-5 order-lg-1 order-2 text-center text-md-left">
+							<div class="divider-60 divider-lg-0"></div>
+							<h2 class="special-heading bold mb-2 text-white">
+								<span>Acharya Ashwinie
+                               </span>
+							</h2>
+						<h5 style="margin-top:0px" class="text-white">	<span>Vedic, Vastu, Palmistry</span></h5>
+							<p class="text-white">
+								Looking for clarity, direction, or peace of mind? India’s Best Astrologer brings you trusted, scientific, and result-oriented astrology services that help you understand your life better and make confident decisions. With years of experience, deep Vedic knowledge, and thousands of satisfied clients across India and abroad, we provide accurate predictions and powerful remedies for every problem.
+							</p>
+<section class="icon-2 desk">
+                        <div class="icon-2-wrapper">
+                            <ul>
+                                <li class="fadeInDown animated"><img src="https://planetsnhouses.com/frontend/photo/100-Guranteed.png" alt="100% Guranteed"></li>
+                                <li class="fadeInUp animated"><img src="https://planetsnhouses.com/frontend/photo/highly-secure.png" alt="Highly Secure"></li>
+                                <li class="fadeInDown animated"><img src="https://planetsnhouses.com/frontend/photo/100-Privacy.png" alt="100% Privacy"></li>
+                            </ul>
+                        </div>
+                    </section>
+
+							<a href="https://wa.me/918294631528?text=Hello%20I%20need%20astrology%20consultation" class="btn btn-maincolor">First Chat Free</a>
+						</div>
+						<div class="col-lg-6 col-xl-7 order-lg-2 order-1 text-center text-lg-right new_wheel">
+    <div class="image">
+        <div class="wheel"><img class="horoscope-image" src="images/horoscope.png" alt="img"></div>
+        <div class="person"><img src="images/astrologer.png" alt="Dr. Hemant Barua"></div>
+    </div>
+</div>
+
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+
+
+<section class="s-py-90 s-py-xl-150 c-gutter-50">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-lg-4 col-12">
+				<div class="consult-card">
+					<img src="images/parallax/hororscope-analysis.png" alt="" style="width:100px">
+					<div class="card-content text-center">
+						<h5 class="mt-2">Detailed Horoscope Analysis</h5>
+						<p >Ask any number of Questions Related to any area of your life, like Business, Job, Love Relationship, Foreign Settlement, Marriage, Children, Health, Wealth etc.</p>
+					</div>
+					<a href="https://wa.me/918294631528?text=Hello%20I%20need%20astrology%20consultation" class="btn btn-outline-maincolor btn-medium mt-2">Whatsapp Now</a>
+				</div>
+
+
+			</div>
+
+			<div class="col-lg-4 col-sm-12">
+					<div class="consult-card">
+					<img src="images/parallax/match-making.png" alt="" style="width:100px">
+					<div class="card-content text-center">
+						<h5 class="mt-2">Match Making</h5>
+						<p >A prefect option to check the Compatibility and Harmony between the the couple. A good score of Ashta Guna is not enough.</p>
+					</div>
+					<a href="https://wa.me/918294631528?text=Hello%20I%20need%20astrology%20consultation" class="btn btn-outline-maincolor btn-medium mt-2">Whatsapp Now</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
 </section>
 
-<section>
-  <h2>Our Services</h2>
-  <div class="services">
-    <div class="card">Web Development</div>
-    <div class="card">App Development</div>
-    <div class="card">Cloud Solutions</div>
+
+
+			<!--Section About-->
+
+
+			<!-- <section id="about" class="ds s-py-90 s-py-xl-150 c-gutter-50">
+				<div class="container">
+					<div class="row align-center">
+						<div class="col-lg-6">
+							<img src="images/about.png" alt="img">
+						</div>
+						<div class="col-lg-6 text-center text-md-left">
+							<div class="divider-60 divider-lg-0 "></div>
+							<p class="text-white text-center text-md-left fs-20 line-right mb-0">
+								<span>About</span>
+							</p>
+							<h3 class="special-heading mt-2 fs-60 text-center text-md-left">
+								<span>Acharya Ashwinie</span>
+							</h3>
+							<div class="divider-35"></div>
+							<p>
+							Acharya Ashwinie has a vivid experience of more than 16 years in the field of astrology. With his extensive knowledge and skill set, he has served his clients with the uttermost dedication and led them to live happy life. Along with this, he also specializes in Vastu and Palmistry. He puts the concepts and analysis to use to come up with conclusions in regard to the problems faced by his clients.
+
+
+							</p>
+							<p>
+								He has a strong passion for astrology, which he later turned into his profession as he believes his understanding of it can change and help many people. He deals with his clients' issues very well and gently, so that it's easier for them to interpret them and follow the instructions. He aims to keep helping like this for the rest of his life.
+							</p>
+
+							<div class="divider-30 divider-xl-50"></div>
+							<a href="#" class="btn btn-outline-maincolor btn-medium">Whatsapp Now</a>
+						</div>
+					</div>
+				</div>
+			</section> -->
+
+
+
+
+
+
+
+
+
+			<!--Section Service-->
+			<!-- <section id="services" class="section-service s-overlay mobile-overlay s-py-90 s-py-xl-150 container-px-xl-0">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-xl-5"></div>
+						<div class="col-xl-3 col-lg-6">
+							<p class="text-dark text-center text-md-left fs-20 line-right mb-0">
+								<span>Our Expertise</span>
+							</p>
+							<h3 class="special-heading mt-2 fs-60 text-center text-md-left">
+								<span>Let’s Make <br>Some Magic</span>
+							</h3>
+						</div>
+						<div class="col-xl-3 col-lg-6 text-center text-md-left">
+							<p class="text-center text-md-left  mt-4 mt-lg-0">
+								<span>They will provide the best free horoscope <br>astrology to you by analysing your sign.</span>
+							</p>
+							<div class="divider-35"></div>
+							<a href="contact.html" class="btn btn-outline-maincolor btn-medium">Whatsapp Now</a>
+						</div>
+						<div class="col-xl-1"></div>
+						<div class="col-xl-3"></div>
+						<div class="col-xl-9">
+							<div class="big-width">
+								<div class="divider-55"></div>
+								<div class="owl-carousel " data-responsive-lg="4" data-responsive-md="3" data-responsive-sm="2" data-responsive-xs="1" data-nav="false" data-margin="30" data-loop="true" data-autoplay="true">
+									<div class="vertical-item service-layout-2 content-absolute box-shadow  content-padding">
+										<div class="item-media">
+											<img src="images/services/business.webp" alt="img">
+											<div class="media-links">
+												<a class="abs-link" title="" href="service-single.html"></a>
+											</div>
+										</div>
+										<div class="item-content overflow-hidden">
+											<div class="d-flex align-center flex-wrap">
+												<h5 class="my-0 links-maincolor2 mr-auto pr-2">
+													<a href="service-single.html">Business Problem</a>
+												</h5>
+												<a href="service-single.html" class="font-2">Read Now <i class="fa fa-caret-right color-main ml-2"></i></a>
+											</div>
+
+											<p>
+												Integer sagittis nisi nec tortor fermentum aliquet.
+											</p>
+										</div>
+									</div>
+									<div class="vertical-item service-layout-2 content-absolute box-shadow  content-padding">
+										<div class="item-media">
+											<img src="images/services/career.webp" alt="img">
+											<div class="media-links">
+												<a class="abs-link" title="" href="service-single.html"></a>
+											</div>
+										</div>
+										<div class="item-content overflow-hidden">
+											<div class="d-flex align-center flex-wrap">
+												<h5 class="my-0 links-maincolor2 mr-auto pr-2">
+													<a href="service-single.html">Career Problem</a>
+												</h5>
+												<a href="service-single.html" class="font-2">Read Now <i class="fa fa-caret-right color-main ml-2"></i></a>
+											</div>
+
+											<p>
+												Integer sagittis nisi nec tortor fermentum aliquet.
+											</p>
+										</div>
+									</div>
+									<div class="vertical-item service-layout-2 content-absolute box-shadow  content-padding">
+										<div class="item-media">
+											<img src="images/services/marriage.webp" alt="img">
+											<div class="media-links">
+												<a class="abs-link" title="" href="service-single.html"></a>
+											</div>
+										</div>
+										<div class="item-content overflow-hidden">
+											<div class="d-flex align-center flex-wrap">
+												<h5 class="my-0 links-maincolor2 mr-auto pr-2">
+													<a href="service-single.html">Marriage Problem</a>
+												</h5>
+												<a href="service-single.html" class="font-2">Read Now <i class="fa fa-caret-right color-main ml-2"></i></a>
+											</div>
+
+											<p>
+												Integer sagittis nisi nec tortor fermentum aliquet.
+											</p>
+										</div>
+									</div>
+									<div class="vertical-item service-layout-2 content-absolute box-shadow  content-padding">
+										<div class="item-media">
+											<img src="images/services/match.webp" alt="img">
+											<div class="media-links">
+												<a class="abs-link" title="" href="service-single.html"></a>
+											</div>
+										</div>
+										<div class="item-content overflow-hidden">
+											<div class="d-flex align-center flex-wrap">
+												<h5 class="my-0 links-maincolor2 mr-auto pr-2">
+													<a href="service-single.html">Match Making</a>
+												</h5>
+												<a href="service-single.html" class="font-2">Read Now <i class="fa fa-caret-right color-main ml-2"></i></a>
+											</div>
+
+											<p>
+												Integer sagittis nisi nec tortor fermentum aliquet.
+											</p>
+										</div>
+									</div>
+									<div class="vertical-item service-layout-2 content-absolute box-shadow  content-padding">
+										<div class="item-media">
+											<img src="images/services/foreign.webp" alt="img">
+											<div class="media-links">
+												<a class="abs-link" title="" href="service-single.html"></a>
+											</div>
+										</div>
+										<div class="item-content overflow-hidden">
+											<div class="d-flex align-center flex-wrap">
+												<h5 class="my-0 links-maincolor2 mr-auto pr-2">
+													<a href="service-single.html">Foreign Settlement</a>
+												</h5>
+												<a href="service-single.html" class="font-2">Read Now <i class="fa fa-caret-right color-main ml-2"></i></a>
+											</div>
+
+											<p>
+												Integer sagittis nisi nec tortor fermentum aliquet.
+											</p>
+										</div>
+									</div>
+									<div class="vertical-item service-layout-2 content-absolute box-shadow  content-padding">
+										<div class="item-media">
+											<img src="images/services/love-relationship.webp" alt="img">
+											<div class="media-links">
+												<a class="abs-link" title="" href="service-single.html"></a>
+											</div>
+										</div>
+										<div class="item-content overflow-hidden">
+											<div class="d-flex align-center flex-wrap">
+												<h5 class="my-0 links-maincolor2 mr-auto pr-2">
+													<a href="service-single.html">Love Relationship</a>
+												</h5>
+												<a href="service-single.html" class="font-2">Read Now <i class="fa fa-caret-right color-main ml-2"></i></a>
+											</div>
+
+											<p>
+												Integer sagittis nisi nec tortor fermentum aliquet.
+											</p>
+										</div>
+									</div>
+
+                                    	<div class="vertical-item service-layout-2 content-absolute box-shadow  content-padding">
+										<div class="item-media">
+											<img src="images/services/img_9.jpg" alt="img">
+											<div class="media-links">
+												<a class="abs-link" title="" href="service-single.html"></a>
+											</div>
+										</div>
+										<div class="item-content overflow-hidden">
+											<div class="d-flex align-center flex-wrap">
+												<h5 class="my-0 links-maincolor2 mr-auto pr-2">
+													<a href="service-single.html">Wealthy & Property</a>
+												</h5>
+												<a href="service-single.html" class="font-2">Read Now <i class="fa fa-caret-right color-main ml-2"></i></a>
+											</div>
+
+											<p>
+												Integer sagittis nisi nec tortor fermentum aliquet.
+											</p>
+										</div>
+									</div>
+									<div class="vertical-item service-layout-2 content-absolute box-shadow  content-padding">
+										<div class="item-media">
+											<img src="images/services/healthy-fitness.webp" alt="img">
+											<div class="media-links">
+												<a class="abs-link" title="" href="service-single.html"></a>
+											</div>
+										</div>
+										<div class="item-content overflow-hidden">
+											<div class="d-flex align-center flex-wrap">
+												<h5 class="my-0 links-maincolor2 mr-auto pr-2">
+													<a href="service-single.html">Health & Fitness</a>
+												</h5>
+												<a href="service-single.html" class="font-2">Read Now <i class="fa fa-caret-right color-main ml-2"></i></a>
+											</div>
+
+											<p>
+												Integer sagittis nisi nec tortor fermentum aliquet.
+											</p>
+										</div>
+									</div>
+									<div class="vertical-item service-layout-2 content-absolute box-shadow  content-padding">
+										<div class="item-media">
+											<img src="images/services/legal.webp" alt="img">
+											<div class="media-links">
+												<a class="abs-link" title="" href="service-single.html"></a>
+											</div>
+										</div>
+										<div class="item-content overflow-hidden">
+											<div class="d-flex align-center flex-wrap">
+												<h5 class="my-0 links-maincolor2 mr-auto pr-2">
+													<a href="service-single.html">Legal Issues</a>
+												</h5>
+												<a href="service-single.html" class="font-2">Read Now <i class="fa fa-caret-right color-main ml-2"></i></a>
+											</div>
+
+											<p>
+												Integer sagittis nisi nec tortor fermentum aliquet.
+											</p>
+										</div>
+									</div>
+									<div class="vertical-item service-layout-2 content-absolute box-shadow  content-padding">
+										<div class="item-media">
+											<img src="images/services/foreign.webp" alt="img">
+											<div class="media-links">
+												<a class="abs-link" title="" href="service-single.html"></a>
+											</div>
+										</div>
+										<div class="item-content overflow-hidden">
+											<div class="d-flex align-center flex-wrap">
+												<h5 class="my-0 links-maincolor2 mr-auto pr-2">
+													<a href="service-single.html">Foreign Settlement</a>
+												</h5>
+												<a href="service-single.html" class="font-2">Read Now <i class="fa fa-caret-right color-main ml-2"></i></a>
+											</div>
+
+											<p>
+												Integer sagittis nisi nec tortor fermentum aliquet.
+											</p>
+										</div>
+									</div>
+
+								</div>
+								<div class="divider-35"></div>
+								<div class="owl-custom-nav romb">
+									<a href="#" class="owl-prev"><i class="ico ico-right-arrow"></i></a>
+									<a href="#" class="owl-next"><i class="ico ico-right-arrow"></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section> -->
+
+<section class="s-pt-90 s-pb-60 c-gutter-60">
+				<div class="container">
+<h3 class="text-center">Our Services</h3>
+					<div class="row c-mb-60">
+
+						<main class="col-12">
+							<div class="row isotope-wrapper masonry-layout">
+								<div class="col-xl-4 col-md-6">
+									<article class="vertical-item  text-center box-shadow content-padding padding-big post type-post status-publish format-standard has-post-thumbnail">
+										<div class="item-media post-thumbnail">
+											<a href="#">
+												<img src="images/service/business.webp" alt="img">
+											</a>
+										</div><!-- .post-thumbnail -->
+										<div class="item-content">
+											<header class="entry-header">
+												<h4 class="entry-title  links-maincolor2">
+													<a class="fs-30" href="business-problem.php" rel="bookmark">
+													Business Problem
+													</a>
+												</h4>
+											</header>
+											<!-- .entry-header -->
+<p>Struggling with losses, partnership issues or growth blockage? Astrology helps analyze business energies and identify corrective solutions for success and profitability.
+</p>
+	<a href="https://wa.me/918294631528?text=Hello%20I%20need%20astrology%20consultation" class="btn  btn-medium">Whatsapp Now</a>
+
+										</div><!-- .item-content -->
+
+									</article><!-- #post-## -->
+
+								</div>
+
+								<div class="col-xl-4 col-md-6">
+									<article class="vertical-item  text-center  box-shadow content-padding padding-big post type-post status-publish format-standard has-post-thumbnail">
+										<div class="item-media post-thumbnail">
+											<a href="#">
+											<img src="images/service/Education-Problem.webp" alt="img">
+											</a>
+										</div><!-- .post-thumbnail -->
+										<div class="item-content">
+											<header class="entry-header">
+												<h4 class="entry-title  links-maincolor2">
+													<a class="fs-30" href="education-problem.php" rel="bookmark">
+													Education Problem
+													</a>
+												</h4>
+											</header>
+											<!-- .entry-header -->
+<p>Job instability, workplace stress or promotion delays? Get astrological guidance to align your career path and achieve professional progress and satisfaction.</p>
+	<a href="https://wa.me/918294631528?text=Hello%20I%20need%20astrology%20consultation" class="btn  btn-medium">Whatsapp Now</a>
+										</div><!-- .item-content -->
+									</article><!-- #post-## -->
+								</div>
+
+								<div class="col-xl-4 col-md-6">
+									<article class="vertical-item text-center box-shadow content-padding padding-big post type-post status-publish format-standard has-post-thumbnail">
+										<div class="item-media post-thumbnail">
+											<a href="#">
+												<img src="images/service/marriage.webp" alt="img">
+											</a>
+										</div><!-- .post-thumbnail -->
+										<div class="item-content">
+											<header class="entry-header">
+												<h4 class="entry-title  links-maincolor2">
+													<a class="fs-30" href="marriage-problem.php" rel="bookmark">
+														Marriage Problem
+													</a>
+												</h4>
+											</header>
+											<!-- .entry-header -->
+<p>Facing misunderstandings, delays in marriage or relationship disputes? Astrology helps restore harmony and ensures long lasting  <br> marital compatibility.</p>
+	<a href="https://wa.me/918294631528?text=Hello%20I%20need%20astrology%20consultation" class="btn  btn-medium">Whatsapp Now</a>
+										</div><!-- .item-content -->
+									</article><!-- #post-## -->
+								</div>
+
+									<div class="col-xl-4 col-md-6">
+									<article class="vertical-item  text-center  box-shadow content-padding padding-big post type-post status-publish format-standard has-post-thumbnail">
+										<div class="item-media post-thumbnail">
+											<a href="#">
+												<img src="images/service/match.webp" alt="img">
+											</a>
+										</div><!-- .post-thumbnail -->
+										<div class="item-content">
+											<header class="entry-header">
+												<h4 class="entry-title  links-maincolor2">
+													<a class="fs-30" href="match-making.php" rel="bookmark">
+														Match Making
+													</a>
+												</h4>
+											</header>
+											<!-- .entry-header -->
+
+<p>Match Kundali for compatibility, stability, and happiness before marriage. Ensure a perfect and prosperous lifelong partnership with Vedic astrology.</p>
+	<a href="https://wa.me/918294631528?text=Hello%20I%20need%20astrology%20consultation" class="btn  btn-medium">Whatsapp Now</a>
+										</div><!-- .item-content -->
+									</article><!-- #post-## -->
+								</div>
+
+
+
+									<div class="col-xl-4 col-md-6">
+									<article class="vertical-item  text-center  box-shadow content-padding padding-big post type-post status-publish format-standard has-post-thumbnail">
+										<div class="item-media post-thumbnail">
+											<a href="#">
+												<img src="images/service/love.webp" alt="img">
+											</a>
+										</div><!-- .post-thumbnail -->
+										<div class="item-content">
+											<header class="entry-header">
+												<h4 class="entry-title  links-maincolor2">
+													<a class="fs-30" href="love-relationship.php" rel="bookmark">
+													Love Relationship
+													</a>
+												</h4>
+											</header>
+											<!-- .entry-header -->
+
+<p>Love relationship strengthens emotional bonding, trust, care and companionship, bringing happiness, support and mutual understanding while growing together through life’s challenges.</p>
+	<a href="https://wa.me/918294631528?text=Hello%20I%20need%20astrology%20consultation" class="btn  btn-medium">Whatsapp Now</a>
+										</div><!-- .item-content -->
+									</article><!-- #post-## -->
+								</div>
+
+
+									<div class="col-xl-4 col-md-6">
+									<article class="vertical-item  text-center  box-shadow content-padding padding-big post type-post status-publish format-standard has-post-thumbnail">
+										<div class="item-media post-thumbnail">
+											<a href="#">
+												<img src="images/service/foreign.webp" alt="img">
+											</a>
+										</div><!-- .post-thumbnail -->
+										<div class="item-content">
+											<header class="entry-header">
+												<h4 class="entry-title  links-maincolor2">
+													<a class="fs-30" href="foreign-settlement.php" rel="bookmark">
+													Foreign Settlement
+													</a>
+												</h4>
+											</header>
+											<!-- .entry-header -->
+
+<p>Dreaming of settling abroad but facing visa or delay challenges? Astrology helps identify favorable periods and removes planetary obstacles.</p>
+	<a href="https://wa.me/918294631528?text=Hello%20I%20need%20astrology%20consultation" class="btn b btn-medium">Whatsapp Now</a>
+										</div><!-- .item-content -->
+									</article><!-- #post-## -->
+								</div>
+
+
+								<div class="col-xl-4 col-md-6">
+									<article class="vertical-item  text-center  box-shadow content-padding padding-big post type-post status-publish format-standard has-post-thumbnail">
+										<div class="item-media post-thumbnail">
+											<a href="#">
+												<img src="images/service/finance.webp" alt="img">
+											</a>
+										</div><!-- .post-thumbnail -->
+										<div class="item-content">
+											<header class="entry-header">
+												<h4 class="entry-title  links-maincolor2">
+													<a class="fs-30" href="finance.php" rel="bookmark">
+												Finance
+													</a>
+												</h4>
+											</header>
+											<!-- .entry-header -->
+<p>Financial blockage, property disputes or investment issues? Get astrological remedies to unlock prosperity and secure long-term financial stability.</p>
+	<a href="https://wa.me/918294631528?text=Hello%20I%20need%20astrology%20consultation" class="btn  btn-medium">Whatsapp Now</a>
+										</div><!-- .item-content -->
+									</article><!-- #post-## -->
+								</div>
+
+
+								<div class="col-xl-4 col-md-6">
+									<article class="vertical-item  text-center  box-shadow content-padding padding-big post type-post status-publish format-standard has-post-thumbnail">
+										<div class="item-media post-thumbnail">
+											<a href="#">
+												<img src="images/service/fitness.webp" alt="img">
+											</a>
+										</div><!-- .post-thumbnail -->
+										<div class="item-content">
+											<header class="entry-header">
+												<h4 class="entry-title  links-maincolor2">
+													<a class="fs-30" href="health-problem.php" rel="bookmark">
+														Health Problem
+													</a>
+												</h4>
+											</header>
+											<!-- .entry-header -->
+
+<p>Unexpected illnesses or low energy affecting life? Astrology identifies health-related doshas and offers solutions for long-term physical and mental wellness.</p>
+	<a href="https://wa.me/918294631528?text=Hello%20I%20need%20astrology%20consultation" class="btn  btn-medium">Whatsapp Now</a>
+										</div><!-- .item-content -->
+									</article><!-- #post-## -->
+								</div>
+
+
+									<div class="col-xl-4 col-md-6">
+									<article class="vertical-item  text-center  box-shadow content-padding padding-big post type-post status-publish format-standard has-post-thumbnail">
+										<div class="item-media post-thumbnail">
+											<a href="#">
+												<img src="images/service/legal-issues.webp" alt="img">
+											</a>
+										</div><!-- .post-thumbnail -->
+										<div class="item-content">
+											<header class="entry-header">
+												<h4 class="entry-title  links-maincolor2">
+													<a class="fs-30" href="legal-issues.php" rel="bookmark">
+													Legal Issues
+													</a>
+												</h4>
+											</header>
+											<!-- .entry-header -->
+<p>disputes or legal delays? Astrology provides remedies to reduce negativity and attract favorable outcomes with the right planetary alignment.</p>
+	<a href="https://wa.me/918294631528?text=Hello%20I%20need%20astrology%20consultation" class="btn btn-medium">Whatsapp Now</a>
+										</div><!-- .item-content -->
+									</article><!-- #post-## -->
+								</div>
+
+
+								<div class="col-xl-4 col-md-6">
+									<article class="vertical-item  text-center  box-shadow content-padding padding-big post type-post status-publish format-standard has-post-thumbnail">
+										<div class="item-media post-thumbnail">
+											<a href="#">
+												<img src="images/service/horoscope.webp" alt="img">
+											</a>
+										</div><!-- .post-thumbnail -->
+										<div class="item-content">
+											<header class="entry-header">
+												<h4 class="entry-title  links-maincolor2">
+													<a class="fs-30" href="horoscope-analyse.php" rel="bookmark">
+													Horoscope Analysis
+													</a>
+												</h4>
+											</header>
+											<!-- .entry-header -->
+<p>Detailed Kundali reading to understand personality, life challenges, relationship, career, finance and future predictions for a better life direction.</p>
+	<a href="https://wa.me/918294631528?text=Hello%20I%20need%20astrology%20consultation" class="btn  btn-medium">Whatsapp Now</a>
+										</div><!-- .item-content -->
+									</article><!-- #post-## -->
+								</div>
+
+
+
+<div class="col-xl-4 col-md-6">
+									<article class="vertical-item  text-center  box-shadow content-padding padding-big post type-post status-publish format-standard has-post-thumbnail">
+										<div class="item-media post-thumbnail">
+											<a href="#">
+												<img src="images/service/Child-Name.webp" alt="img">
+											</a>
+										</div><!-- .post-thumbnail -->
+										<div class="item-content">
+											<header class="entry-header">
+												<h4 class="entry-title  links-maincolor2">
+													<a class="fs-30" href="child-name.php" rel="bookmark">
+												Child Name
+													</a>
+												</h4>
+											</header>
+											<!-- .entry-header -->
+<p>Astrology suggests lucky and meaningful child names based on birth stars and planets, ensuring health, success, positivity and lifelong prosperity.</p>
+	<a href="https://wa.me/918294631528?text=Hello%20I%20need%20astrology%20consultation" class="btn  btn-medium">Whatsapp Now</a>
+										</div><!-- .item-content -->
+									</article><!-- #post-## -->
+								</div>
+
+
+
+							<div class="col-xl-4 col-md-6">
+									<article class="vertical-item  text-center  box-shadow content-padding padding-big post type-post status-publish format-standard has-post-thumbnail">
+										<div class="item-media post-thumbnail">
+											<a href="#">
+												<img src="images/service/Depression.webp" alt="img">
+											</a>
+										</div><!-- .post-thumbnail -->
+										<div class="item-content">
+											<header class="entry-header">
+												<h4 class="entry-title  links-maincolor2">
+													<a class="fs-30" href="depression.php" rel="bookmark">
+												Depression
+													</a>
+												</h4>
+											</header>
+											<!-- .entry-header -->
+<p>Astrology identifies planetary influences creating emotional distress and provides healing remedies for mental balance, positivity, confidence.</p>
+	<a href="https://wa.me/918294631528?text=Hello%20I%20need%20astrology%20consultation" class="btn  btn-medium">Whatsapp Now</a>
+										</div><!-- .item-content -->
+									</article><!-- #post-## -->
+								</div>
+
+
+
+
+							<div class="col-xl-4 col-md-6">
+									<article class="vertical-item  text-center  box-shadow content-padding padding-big post type-post status-publish format-standard has-post-thumbnail">
+										<div class="item-media post-thumbnail">
+											<a href="vastu.php">
+												<img src="images/service/vastu.webp" alt="img">
+											</a>
+										</div><!-- .post-thumbnail -->
+										<div class="item-content">
+											<header class="entry-header">
+												<h4 class="entry-title  links-maincolor2">
+													<a class="fs-30" href="#" rel="bookmark">
+													Vastu
+													</a>
+												</h4>
+											</header>
+											<!-- .entry-header -->
+<p>Vastu aligns home and workspace energy with universal forces to improve health, wealth, relationships, growth and overall happiness.</p>
+	<a href="https://wa.me/918294631528?text=Hello%20I%20need%20astrology%20consultation" class="btn btn-outline-maincolor2 btn-medium">Whatsapp Now</a>
+										</div><!-- .item-content -->
+									</article><!-- #post-## -->
+								</div>
+
+
+			<div class="col-xl-4 col-md-6">
+									<article class="vertical-item  text-center  box-shadow content-padding padding-big post type-post status-publish format-standard has-post-thumbnail">
+										<div class="item-media post-thumbnail">
+											<a href="#">
+												<img src="images/service/Remedies.webp" alt="img">
+											</a>
+										</div><!-- .post-thumbnail -->
+										<div class="item-content">
+											<header class="entry-header">
+												<h4 class="entry-title  links-maincolor2">
+													<a class="fs-30" href="remedies.php" rel="bookmark">
+													Remedies
+													</a>
+												</h4>
+											</header>
+											<!-- .entry-header -->
+<p>Effective astrological remedies remove planetary obstacles using mantras, rituals, gemstones and lifestyle changes to restore peace, success and positivity.</p>
+	<a href="https://wa.me/918294631528?text=Hello%20I%20need%20astrology%20consultation" class="btn btn-outline-maincolor2 btn-medium">Whatsapp Now</a>
+										</div><!-- .item-content -->
+									</article><!-- #post-## -->
+								</div>
+
+
+											<div class="col-xl-4 col-md-6">
+									<article class="vertical-item text-center  box-shadow content-padding padding-big post type-post status-publish format-standard has-post-thumbnail">
+										<div class="item-media post-thumbnail">
+											<a href="#">
+												<img src="images/service/Palmistry.webp" alt="img">
+											</a>
+										</div><!-- .post-thumbnail -->
+										<div class="item-content">
+											<header class="entry-header">
+												<h4 class="entry-title  links-maincolor2">
+													<a class="fs-30" href="palmistry.php" rel="bookmark">
+													Palmistry
+													</a>
+												</h4>
+											</header>
+											<!-- .entry-header -->
+<p>Palmistry reveals life patterns, strengths and challenges through hand lines, guiding decisions on love, career, finance and personal growth.</p>
+	<a href="https://wa.me/918294631528?text=Hello%20I%20need%20astrology%20consultation" class="btn  btn-medium">Whatsapp Now</a>
+										</div><!-- .item-content -->
+									</article><!-- #post-## -->
+								</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+							</div>
+						</main>
+					</div>
+				</div>
+			</section>
+
+
+			<section class="achievement-section mb-5">
+  <div class="container">
+    <h2 class="ach-title">Why People Trust Us</h2>
+    <div class="ach-list">
+
+      <div class="ach-item">
+        <span class="ach-icon">⭐</span>
+        <p>Renowned and trusted astrologer with deep spiritual knowledge</p>
+      </div>
+
+      <div class="ach-item">
+        <span class="ach-icon">💬</span>
+        <p>Top-rated astrologer on AstroSage with hundreds of 5-star reviews</p>
+      </div>
+
+      <div class="ach-item">
+        <span class="ach-icon">👥</span>
+        <p>More than <strong>80,000+ successful consultations</strong></p>
+      </div>
+
+      <div class="ach-item">
+        <span class="ach-icon">🚀</span>
+        <p><strong>60,000+ Followers</strong> on AstroSage from India & overseas</p>
+      </div>
+
+    </div>
   </div>
 </section>
 
-<section>
-  <h2>Why Choose Us</h2>
-  <p>Reliable | Scalable | Affordable</p>
+
+
+<section class="consultation-section" id="book-consultation">
+  <div class="container">
+    <h2 class="title">Consultation Charges</h2>
+    <p class="subtitle">Choose the consultation plan that suits you best</p>
+
+    <div class="pricing-grid">
+
+      <div class="pricing-card">
+		<img src="images/consultation/FULL-PREDICTION-01.webp" alt="" style="width:100%;height:250px">
+        <h3>Full Prediction (Video / Audio)</h3>
+        <p class="duration">⏳ 60 Minutes Session</p>
+        <p class="price">₹ 4000 / ₹ 5000</p>
+        <a href="https://wa.me/918294631528?text=Hello%20I%20need%20astrology%20consultation" class="btn-book">Book Now</a>
+      </div>
+
+      <div class="pricing-card">
+		<img src="images/consultation/FULL-PREDICTION-02.webp" alt="" style="width:100%;height:250px">
+        <h3>Full Prediction (Video / Audio)</h3>
+        <p class="duration">⏳ 30 Minutes Session</p>
+        <p class="price">₹ 2500</p>
+        <a href="https://wa.me/918294631528?text=Hello%20I%20need%20astrology%20consultation" class="btn-book">Book Now</a>
+      </div>
+
+      <div class="pricing-card">
+		<img src="images/consultation/PDF-PREDICTION.webp" alt="" style="width:100%;height:250px">
+        <h3>Prediction Report (PDF File)</h3>
+        <p class="duration">Detailed 25+ Pages Horoscope Analysis</p>
+        <p class="price">₹ 5100</p>
+        <a href="https://wa.me/918294631528?text=Hello%20I%20need%20astrology%20consultation" class="btn-book">Book Now</a>
+      </div>
+
+    </div>
+  </div>
 </section>
 
-<section>
-  <h2>Contact</h2>
-  <p>Email: contact@rlptechnology.co.in</p>
-</section>
 
-<footer>
-  <p>© 2026 RLP Technology</p>
+			<!-- Section Testimonials -->
+			<section id="faq" class="ds s-py-90 s-pt-xl-145 s-pb-xl-130">
+				<div class="container">
+					<div class="row">
+						<div class="col-12 text-center">
+							<h3 class="text-center mt-0 mb-2 special-heading fs-60 color-main ">
+								<span class="text-white">What Clients Are Saying</span>
+							</h3>
+							<div class="line"></div>
+
+
+							<div class="divider-40 divider-xl-60"></div>
+
+							<div class="owl-carousel quote-carousel owl-navigation" data-responsive-lg="3" data-responsive-md="3" data-responsive-sm="1" data-responsive-xs="1" data-nav="false" data-margin="50" data-loop="true" data-dots="false" data-autoplay="true" data-center="true">
+								<div class="quote-item vertical quote-layout-2">
+									<div class="wrap-img">
+										<img src="images/gallery/quote_1.jpg" alt="img">
+									</div>
+									<div class="wrap-content">
+										<div class="quote-image">
+											<img src="images/team/user.png" alt="img">
+										</div>
+										<div class="quote-title">
+											<h5 class="mb-0 color-main2 bold">9191463*****</h5>
+											<p class="mb-0 text-dark">Happy Customer</p>
+										</div>
+										<div class="quote-content">
+											<blockquote>
+												<p>
+													very great guidance. will highly recommend . very deep knowledge and understanding of Jyothish..
+												</p>
+											</blockquote>
+										</div>
+									</div>
+								</div>
+								<div class="quote-item vertical quote-layout-2">
+									<div class="wrap-img">
+										<img src="images/gallery/quote_2.jpg" alt="img">
+									</div>
+									<div class="wrap-content">
+										<div class="quote-image">
+											<img src="images/team/user.png" alt="img">
+										</div>
+										<div class="quote-title">
+											<h5 class="mb-0 color-main2 bold">9187702*****
+</h5>
+											<p class="mb-0 ">Happy Customer</p>
+										</div>
+										<div class="quote-content">
+											<blockquote>
+												<p>
+												kaphi aacha ormmotivation ke saath aachi tarh se batya jo time period bataya tha use anusar mera karya hua dhanyawad
+
+
+												</p>
+											</blockquote>
+										</div>
+									</div>
+								</div>
+								<div class="quote-item vertical quote-layout-2">
+									<div class="wrap-img">
+										<img src="images/gallery/quote_3.jpg" alt="img">
+									</div>
+									<div class="wrap-content">
+										<div class="quote-image">
+											<img src="images/team/user.png" alt="img">
+										</div>
+										<div class="quote-title">
+											<h5 class="mb-0 color-main2 bold">9199111*****</h5>
+											<p class="mb-0 text-dark">Happy Customer</p>
+										</div>
+										<div class="quote-content">
+											<blockquote>
+												<p>
+													Acharya ji hamesha Sahi jankari or prediction karte hai. Aap se baat karke Bahut santushti milti hai. 💐🙏🏻
+												</p>
+											</blockquote>
+										</div>
+									</div>
+								</div>
+								<div class="quote-item vertical quote-layout-2">
+									<div class="wrap-img">
+										<img src="images/gallery/quote_3.jpg" alt="img">
+									</div>
+									<div class="wrap-content">
+										<div class="quote-image">
+											<img src="images/team/user.png" alt="img">
+										</div>
+										<div class="quote-title">
+											<h5 class="mb-0 color-main2 bold">9199756*****</h5>
+											<p class="mb-0 text-dark">Happy Customer</p>
+										</div>
+										<div class="quote-content">
+											<blockquote>
+												<p>
+													Acharyaji is excellent! he answered all my doubts with great accuracy. I was truly amazed by how deeply he understood the issue I was concerned about. He’s the best astrologer on this platform
+												</p>
+											</blockquote>
+										</div>
+									</div>
+								</div>
+
+								<div class="quote-item vertical quote-layout-2">
+									<div class="wrap-img">
+										<img src="images/gallery/quote_3.jpg" alt="img">
+									</div>
+									<div class="wrap-content">
+										<div class="quote-image">
+											<img src="images/team/user.png" alt="img">
+										</div>
+										<div class="quote-title">
+											<h5 class="mb-0 color-main2 bold">4477760*****</h5>
+											<p class="mb-0 text-white">Happy Customer</p>
+										</div>
+										<div class="quote-content">
+											<blockquote>
+												<p>
+													What a great soul ! He is truly a genuine astrologer and very helpful , empathetic . Thank you Sir🙏
+												</p>
+											</blockquote>
+										</div>
+									</div>
+								</div>
+								<div class="quote-item vertical quote-layout-2">
+									<div class="wrap-img">
+										<img src="images/gallery/quote_3.jpg" alt="img">
+									</div>
+									<div class="wrap-content">
+										<div class="quote-image">
+											<img src="images/team/user.png" alt="img">
+										</div>
+										<div class="quote-title">
+											<h5 class="mb-0 color-main2 bold">9193193*****</h5>
+											<p class="mb-0 text-dark">Happy Customer</p>
+										</div>
+										<div class="quote-content">
+											<blockquote>
+												<p>
+													very good so cool nd nice accurate prediction no doubt every question answer with patience
+												</p>
+											</blockquote>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+
+			<section class="payment-section mb-5">
+  <h2 class="payment-title">🔮 Book Your Consultation — Secure Payment Options</h2>
+
+  <p class="payment-subtitle">You can make the payment using Bank Transfer or UPI QR Code. After payment, please share the screenshot on WhatsApp along with your Name & Birth Details.</p>
+
+  <div class="payment-wrapper">
+
+    <!-- BANK DETAILS -->
+    <div class="bank-box">
+      <h3>🏦 Bank Transfer Details</h3>
+      <ul>
+        <li><strong>Account Holder:</strong>  Ashwini Kumar Sharma </li>
+        <li><strong>Bank Name:</strong> ICICI Bank</li>
+        <li><strong>Account Number:</strong> 040401008452</li>
+        <li><strong>IFSC Code:</strong> ICIC0002485</li>
+        <li><strong>Branch:</strong> Digha, Patna</li>
+      </ul>
+    </div>
+
+    <!-- QR Code -->
+    <div class="qr-box">
+      <h3>📌 Scan & Pay (UPI)</h3>
+      <img src="images/qr-code.webp" alt="QR Code for payment">
+      <p class="upi-id"><strong>UPI ID:</strong> 8294631528@ibl</p>
+    </div>
+
+  </div>
+
+  <div class="note-box">
+    ⭐ <strong>After Payment:</strong> Send receipt + Name + Date of Birth + Time of Birth + Place of Birth to WhatsApp
+    <a href="https://wa.me/918294631528?text=Hello%20I%20need%20astrology%20consultation" target="_blank" class="whatsapp-btn">📲 Chat on WhatsApp</a>
+  </div>
+</section>
+			<!--Section Forecast-->
+			<section id="forecasts" class="zodiac_section s-pb-30  s-pb-xl-90 c-gutter-60 c-mb-60">
+				<div class="container">
+					<div class="row">
+						<div class="col-12 text-center mb-0">
+							<h3 class="text-center mt-0 mb-2 special-heading fs-60 color-main">
+								<span>Choose Your Zodiac Sign</span>
+							</h3>
+							<div class="line"></div>
+							<p class="text-center fs-20 mt-4">
+								<span>What’s Your Sign? Read Your Daily <br>Horoscope Today</span>
+							</p>
+
+							<div class="divider-40 divider-xl-60"></div>
+						</div>
+						<div class="col-xl-3 col-lg-4 col-md-6">
+							<div class="vertical-item text-center  content-padding corner-box">
+								<div class="item-content">
+									<div class="icon-styled fs-50">
+										<a href="forecast-page.html" class="color-darkgrey ico ico-icon_aries"></a>
+									</div>
+									<h5 class="mt-4 mt-lg-5 fs-20 links-maincolor2">
+										<a href="forecast-page.html">Aries</a>
+									</h5>
+									<p>
+										Mar 21 - Apr 19
+									</p>
+								</div>
+							</div>
+						</div><!-- .col-* -->
+						<div class="col-xl-3 col-lg-4 col-md-6">
+							<div class="vertical-item text-center  content-padding corner-box">
+								<div class="item-content">
+									<div class="icon-styled fs-50">
+										<a href="forecast-page.html" class="color-darkgrey ico ico-icon_taurus"></a>
+									</div>
+									<h5 class="mt-4 mt-lg-5 fs-20 links-maincolor2">
+										<a href="forecast-page.html">Taurus</a>
+									</h5>
+									<p>
+										Apr 20 - May 20
+									</p>
+								</div>
+							</div>
+						</div><!-- .col-* -->
+						<div class="col-xl-3 col-lg-4 col-md-6">
+							<div class="vertical-item text-center  content-padding corner-box">
+								<div class="item-content">
+									<div class="icon-styled fs-50">
+										<a href="forecast-page.html" class="color-darkgrey ico ico-icon_gemini"></a>
+									</div>
+									<h5 class="mt-4 mt-lg-5 fs-20 links-maincolor2">
+										<a href="forecast-page.html">Gemini</a>
+									</h5>
+									<p>
+										May 21 - Jun 20
+									</p>
+								</div>
+							</div>
+						</div><!-- .col-* -->
+						<div class="col-xl-3 col-lg-4 col-md-6">
+							<div class="vertical-item text-center  content-padding corner-box">
+								<div class="item-content">
+									<div class="icon-styled fs-50">
+										<a href="forecast-page.html" class="color-darkgrey ico ico-icon_cancer"></a>
+									</div>
+									<h5 class="mt-4 mt-lg-5 fs-20 links-maincolor2">
+										<a href="forecast-page.html">Cancer</a>
+									</h5>
+									<p>
+										Jun 21 - Jul 22
+									</p>
+								</div>
+							</div>
+						</div><!-- .col-* -->
+						<div class="col-xl-3 col-lg-4 col-md-6">
+							<div class="vertical-item text-center  content-padding corner-box">
+								<div class="item-content">
+									<div class="icon-styled fs-50">
+										<a href="forecast-page.html" class="color-darkgrey ico ico-icon_leo"></a>
+									</div>
+									<h5 class="mt-4 mt-lg-5 fs-20 links-maincolor2">
+										<a href="forecast-page.html">Leo</a>
+									</h5>
+									<p>
+										Jul 23 - Aug 22
+									</p>
+								</div>
+							</div>
+						</div><!-- .col-* -->
+						<div class="col-xl-3 col-lg-4 col-md-6">
+							<div class="vertical-item text-center  content-padding corner-box">
+								<div class="item-content">
+									<div class="icon-styled fs-50">
+										<a href="forecast-page.html" class="color-darkgrey ico ico-icon_virgo"></a>
+									</div>
+									<h5 class="mt-4 mt-lg-5 fs-20 links-maincolor2">
+										<a href="forecast-page.html">Virgo</a>
+									</h5>
+									<p>
+										Aug 23 - Sep 22
+									</p>
+								</div>
+							</div>
+						</div><!-- .col-* -->
+						<div class="col-xl-3 col-lg-4 col-md-6">
+							<div class="vertical-item text-center  content-padding corner-box">
+								<div class="item-content">
+									<div class="icon-styled fs-50">
+										<a href="forecast-page.html" class="color-darkgrey ico ico-icon_libra"></a>
+									</div>
+									<h5 class="mt-4 mt-lg-5 fs-20 links-maincolor2">
+										<a href="forecast-page.html">Libra</a>
+									</h5>
+									<p>
+										Sep 23 - Oct 22
+									</p>
+								</div>
+							</div>
+						</div><!-- .col-* -->
+						<div class="col-xl-3 col-lg-4 col-md-6">
+							<div class="vertical-item text-center  content-padding corner-box">
+								<div class="item-content">
+									<div class="icon-styled fs-50">
+										<a href="forecast-page.html" class="color-darkgrey ico ico-icon_scorpio"></a>
+									</div>
+									<h5 class="mt-4 mt-lg-5 fs-20 links-maincolor2">
+										<a href="forecast-page.html">Scorpio</a>
+									</h5>
+									<p>
+										Oct 23 - Nov 21
+									</p>
+								</div>
+							</div>
+						</div><!-- .col-* -->
+						<div class="col-xl-3 col-lg-4 col-md-6">
+							<div class="vertical-item text-center  content-padding corner-box">
+								<div class="item-content">
+									<div class="icon-styled fs-50">
+										<a href="forecast-page.html" class="color-darkgrey ico ico-icon_sagittarius"></a>
+									</div>
+									<h5 class="mt-4 mt-lg-5 fs-20 links-maincolor2">
+										<a href="forecast-page.html">Sagittarius</a>
+									</h5>
+									<p>
+										Nov 22 - Dec 21
+									</p>
+								</div>
+							</div>
+						</div><!-- .col-* -->
+						<div class="col-xl-3 col-lg-4 col-md-6">
+							<div class="vertical-item text-center  content-padding corner-box">
+								<div class="item-content">
+									<div class="icon-styled fs-50">
+										<a href="forecast-page.html" class="color-darkgrey ico ico-icon_capricornius"></a>
+									</div>
+									<h5 class="mt-4 mt-lg-5 fs-20 links-maincolor2">
+										<a href="forecast-page.html">Capricornius</a>
+									</h5>
+									<p>
+										Dec 22 - Jan 19
+									</p>
+								</div>
+							</div>
+						</div><!-- .col-* -->
+						<div class="col-xl-3 col-lg-4 col-md-6">
+							<div class="vertical-item text-center  content-padding corner-box">
+								<div class="item-content">
+									<div class="icon-styled fs-50">
+										<a href="forecast-page.html" class="color-darkgrey ico ico-icon_aquarius"></a>
+									</div>
+									<h5 class="mt-4 mt-lg-5 fs-20 links-maincolor2">
+										<a href="forecast-page.html">Aquarius</a>
+									</h5>
+									<p>
+										Jan 20 - Feb 18
+									</p>
+								</div>
+							</div>
+						</div><!-- .col-* -->
+						<div class="col-xl-3 col-lg-4 col-md-6">
+							<div class="vertical-item text-center  content-padding corner-box">
+								<div class="item-content">
+									<div class="icon-styled fs-50">
+										<a href="forecast-page.html" class="color-darkgrey ico ico-icon_pisces"></a>
+									</div>
+									<h5 class="mt-4 mt-lg-5 fs-20 links-maincolor2">
+										<a href="forecast-page.html">Pisces</a>
+									</h5>
+									<p>
+										Feb 19 - Mar 20
+									</p>
+								</div>
+							</div>
+						</div><!-- .col-* -->
+					</div>
+				</div>
+			</section>
+
+			<!-- Section Blog -->
+			<section id="blog" class="pattern s-py-xl-150">
+				<div class="container">
+					<div class="row">
+						<div class="col-xl-5 col-lg-6">
+							<p class="text-white text-center text-md-left fs-20 line-right mb-0">
+								<span>Blog</span>
+							</p>
+							<h3 class="special-heading mt-2 fs-60 text-center text-md-left">
+								<span>Last Materials In Blog</span>
+							</h3>
+						</div>
+						<div class="col-xl-7 col-lg-6 text-center text-md-left">
+							<p class="text-center text-md-left  mt-4 mt-lg-0">
+								<span>Essential Marketing Strategies Every Growing Brand Should Implement Right Now</span>
+							</p>
+							<div class="divider-35"></div>
+							<a href="https://wa.me/918294631528?text=Hello%20I%20need%20astrology%20consultation" class="btn btn-outline-maincolor btn-medium">Whatsapp Now</a>
+						</div>
+
+					</div>
+
+					<div class="row c-mb-60">
+
+						<main class="col-12">
+							<div class="row isotope-wrapper masonry-layout">
+								<div class="col-xl-4 col-md-6">
+									<article class="vertical-item  text-center text-lg-left box-shadow content-padding padding-big post type-post status-publish format-standard has-post-thumbnail">
+										<div class="item-media post-thumbnail">
+											<a href="blog-single-full.html">
+												<img src="images/gallery/08.jpg" alt="img">
+											</a>
+										</div><!-- .post-thumbnail -->
+										<div class="item-content">
+											<header class="entry-header">
+												<h4 class="entry-title mb-3 links-maincolor2">
+													<a class="fs-30" href="blog-single-full.html" rel="bookmark">
+													How Astrology Shapes Your Daily Life–
+													</a>
+												</h4>
+											</header>
+											<!-- .entry-header -->
+
+											<div class="entry-content mt-20">
+												<p>
+													Discover how planetary movements influence your mood, decisions, relationships, and opportunities. Understand the subtle ways astrology guides your everyday life.
+												</p>
+											</div><!-- .entry-content -->
+											<div class="entry-footer flex-row mt-4">
+												<div class="entry-meta">
+													<span>
+														<a href="blog-single-full.html" rel="bookmark">
+															<time class="entry-date published updated" datetime="2018-03-18T15:15:12+00:00">18 may 2020</time>
+														</a>
+													</span>
+												</div>
+												<!-- .entry-meta -->
+												<div class="mt-0 ml-auto">
+													<a href="blog-single-full.html" class="mt-30 font-2">Read Now <i class="fa fa-caret-right color-main ml-2"></i></a>
+												</div>
+											</div>
+										</div><!-- .item-content -->
+									</article><!-- #post-## -->
+								</div>
+
+								<div class="col-xl-4 col-md-6">
+									<article class="vertical-item  text-center text-lg-left box-shadow content-padding padding-big post type-post status-publish format-standard has-post-thumbnail">
+										<div class="item-media post-thumbnail">
+											<a href="blog-single-full.html">
+												<img src="images/gallery/09.jpg" alt="img">
+											</a>
+										</div><!-- .post-thumbnail -->
+										<div class="item-content">
+											<header class="entry-header">
+												<h4 class="entry-title mb-3 links-maincolor2">
+													<a class="fs-30" href="blog-single-full.html" rel="bookmark">
+														The Power of Your Birth Chart: What It Reveals About You
+													</a>
+												</h4>
+											</header>
+											<!-- .entry-header -->
+
+											<div class="entry-content mt-20">
+												<p>
+													Your birth chart is a cosmic blueprint. Learn how it reveals your strengths, weaknesses, purpose, and the unique paths designed for you.
+												</p>
+											</div><!-- .entry-content -->
+											<div class="entry-footer flex-row mt-4">
+												<div class="entry-meta">
+													<span>
+														<a href="blog-single-full.html" rel="bookmark">
+															<time class="entry-date published updated" datetime="2018-03-18T15:15:12+00:00">18 may 2020</time>
+														</a>
+													</span>
+												</div>
+												<!-- .entry-meta -->
+												<div class="mt-0 ml-auto">
+													<a href="blog-single-full.html" class="mt-30 font-2">Read Now <i class="fa fa-caret-right color-main ml-2"></i></a>
+												</div>
+											</div>
+										</div><!-- .item-content -->
+									</article><!-- #post-## -->
+								</div>
+
+								<div class="col-xl-4 col-md-6">
+									<article class="vertical-item  text-center text-lg-left box-shadow content-padding padding-big post type-post status-publish format-standard has-post-thumbnail">
+										<div class="item-media post-thumbnail">
+											<a href="blog-single-full.html">
+												<img src="images/gallery/10.jpg" alt="img">
+											</a>
+										</div><!-- .post-thumbnail -->
+										<div class="item-content">
+											<header class="entry-header">
+												<h4 class="entry-title mb-3 links-maincolor2">
+													<a class="fs-30" href="blog-single-full.html" rel="bookmark">
+														Top 5 Astrology Myths You Should Stop Believing
+													</a>
+												</h4>
+											</header>
+											<!-- .entry-header -->
+
+											<div class="entry-content mt-20">
+												<p>
+													Astrology is often misunderstood. Let’s decode the most common myths and uncover the truth behind the cosmic science.
+												</p>
+											</div><!-- .entry-content -->
+											<div class="entry-footer flex-row mt-4">
+												<div class="entry-meta">
+													<span>
+														<a href="blog-single-full.html" rel="bookmark">
+															<time class="entry-date published updated" datetime="2018-03-18T15:15:12+00:00">18 may 2020</time>
+														</a>
+													</span>
+												</div>
+												<!-- .entry-meta -->
+												<div class="mt-0 ml-auto">
+													<a href="blog-single-full.html" class="mt-30 font-2">Read Now <i class="fa fa-caret-right color-main ml-2"></i></a>
+												</div>
+											</div>
+										</div><!-- .item-content -->
+									</article><!-- #post-## -->
+								</div>
+
+
+
+
+
+							</div>
+
+
+						</main>
+					</div>
+				</div>
+			</section>
+
+
+
+<a href="#book-consultation" class="vertical-side-btn">Book Consultation</a>
+
+<div class="floating-contact">
+  <a href="tel:+918294631528" class="call-btn">
+    📞 Call Now
+  </a>
+  <a href="https://wa.me/918294631528?text=Hello%20I%20need%20astrology%20consultation" target="_blank" class="whatsapp-btn2">
+    💬 WhatsApp
+  </a>
+</div>
+
+			<footer class="page_footer ds ms s-py-70 s-pb-lg-50 s-pt-xl-120 s-pb-xl-80">
+    <div class="container">
+        <div class="row">
+
+            <!-- Logo + Short About -->
+            <div class="col-xl-3 col-lg-3 col-md-6 mb-4 text-center text-lg-left">
+                <a href="index.php" class="logo">
+                    <p class="logo-text" style="color:#ff7022; font-size:26px;    margin-left: 3px;">Acharya Ashwinie</p>
+                </a>
+                <p class="mt-3">
+                    Trusted astrologer helping individuals solve life problems related to love, marriage,
+                    business, finance, career & destiny.
+                </p>
+            </div>
+
+            <!-- Useful Links -->
+            <div class="col-xl-2 col-lg-2 col-md-6 mb-4 text-center text-lg-left">
+                <h5>Quick Links</h5>
+                <ul class="menu">
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="about.php">About Me</a></li>
+                    <li><a href="https://blog.acharyaashwini.com/">Blogs</a></li>
+                    <li><a href="faq.php">FAQ</a></li>
+                    <li><a href="contact.php">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Services -->
+            <div class="col-xl-3 col-lg-3 col-md-6 mb-4 text-center text-lg-left">
+                <h5>Top Services</h5>
+                <ul class="menu">
+                    <li><a href="marriage-problem.php">Marriage Problem</a></li>
+                    <li><a href="love-relationship.php">Love Relationship</a></li>
+                    <li><a href="business-problem.php">Business Problem</a></li>
+                    <li><a href="education-problem.php">Career Issues</a></li>
+                    <li><a href="foreign-settlement.php">Foreign Settlement</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="col-xl-4 col-lg-4 col-md-6 mb-4 text-center text-lg-left">
+                <h5>Contact Info</h5>
+                <p>📍 Patna, Bihar</p>
+                <p>📞 +918294631528</p>
+                <p>📧 contact@acharyaashwini.com
+</p>
+
+                <p class="social-icons mt-3">
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                    <a href="#" class="fa fa-instagram"></a>
+                    <a href="#" class="fa fa-linkedin"></a>
+                    <a href="#" class="fa fa-youtube-play"></a>
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="container mt-4 pt-3 border-top text-center">
+        <p style="margin-bottom:0;">
+            © 2025 <strong style="color:#ff7022;">Acharya Ashwinie</strong>. All Rights Reserved.
+        </p>
+    </div>
 </footer>
 
+		</div><!-- eof #box_wrapper -->
+	</div><!-- eof #canvas -->
+
+
+	<script src="js/compressed.js"></script>
+	<script src="js/main.js"></script>
+
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"c3ad5c9eb7e440d5ad69cf416dc37b40","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
+
+
 </html>
